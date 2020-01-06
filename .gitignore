@@ -4,3 +4,5 @@ twitter-app-credentials.txt
 old
 twitterStream.py
 app.py
+./.idea
+run.sh
