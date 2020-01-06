@@ -44,7 +44,6 @@ object Trainer {
 
     import spark.implicits._
 
-    println("Hello World")
 
     val df:DataFrame = spark
       .read
@@ -78,7 +77,7 @@ object Trainer {
     val cvModel: CountVectorizer = new CountVectorizer()
       .setInputCol(remover.getOutputCol)
       .setOutputCol("vect")
-      .setMinDF(50)
+      .setMinDF(0.1)
 
     // val dfv = cvModel.fit(dfsw).transform(dfsw)
 
@@ -109,10 +108,12 @@ object Trainer {
     val pipeline = new Pipeline()
       .setStages(Array(tokenizer, remover,cvModel,idf, assembler,lr ))
 
-    val model = pipeline.fit(cdf)
+//    val model = pipeline.fit(cdf)
 
     val Array(train,test) = cdf.randomSplit(Array[Double](0.8, 0.2))
 //    val size = (train.count,test.count)
+
+    val model = pipeline.fit(train)
 
     val predictions = model.transform(test)
 //    predictions.select("label","predictions","probability").show(100)

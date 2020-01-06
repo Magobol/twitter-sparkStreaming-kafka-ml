@@ -1,7 +1,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mCalculate mappings...[0m
 [0m[[0m[0mdebug[0m] [0m[0mChecking every *.class/*.jar file's SHA-1.[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerging files...[0m
-[0m[[0m[0mdebug[0m] [0m[0mSHA-1: a4b73d582972d7a63197f128bf5f5bfce7500d00[0m
+[0m[[0m[0mdebug[0m] [0m[0mSHA-1: 4b312b525532dbff52965cfe81018dfe452df988[0m
 [0m[[0m[0minfo[0m] [0m[0mPackaging /home/jorge/Documents/Git/twitter_sentiment_analysis/target/scala-2.11/twitter_sentiment_analysis-assembly-1.0.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Trainer$.class[0m

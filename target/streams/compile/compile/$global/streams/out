@@ -1,13 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/jorge/Documents/Git/twitter_sentiment_analysis/src/main/scala/Trainer.scala:64:53: invalid escape character[0m
-[0m[[0m[31merror[0m] [0m[0m        .withColumn("text",regexp_replace($"text","\.?#nohaygolpeenbolivia\.?",""))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/jorge/Documents/Git/twitter_sentiment_analysis/src/main/scala/Trainer.scala:64:76: invalid escape character[0m
-[0m[[0m[31merror[0m] [0m[0m        .withColumn("text",regexp_replace($"text","\.?#nohaygolpeenbolivia\.?",""))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/jorge/Documents/Git/twitter_sentiment_analysis/src/main/scala/Trainer.scala:65:53: invalid escape character[0m
-[0m[[0m[31merror[0m] [0m[0m        .withColumn("text",regexp_replace($"text","\.?#golpedeestadobolivia\.?",""))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/jorge/Documents/Git/twitter_sentiment_analysis/src/main/scala/Trainer.scala:65:77: invalid escape character[0m
-[0m[[0m[31merror[0m] [0m[0m        .withColumn("text",regexp_replace($"text","\.?#golpedeestadobolivia\.?",""))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/jorge/Documents/Git/twitter_sentiment_analysis/src/main/scala/Trainer.scala:81:19: identifier expected but ')' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      .setMinDF(0.)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
