@@ -4,7 +4,7 @@
 Bolivia went through a political crisis in November 2019 after president Evo Morales resigned following violent demonstrations in the country.
 Following his resignal, two sides appeared in Bolivian society: the first affirming that morales resigned following a coup, and the second affirming
 that Morales resigned after organizing an electoral fraud. Both sides expressed their opinions on Twitter. In particular, pro-Morales
-supporters began systematically twitting with the hashtag #GolpeDeEstadoEnBolivia (coup in Bolivia) and the faction opposed to Morales
+supporters began systematically twitting with the hashtag #GolpeDeEstadoBolivia (coup in Bolivia) and the faction opposed to Morales
 twitted using #NoHayGolpeEnBolivia.
 
 This Project intends to
@@ -18,10 +18,14 @@ and 1733 containing the hashtag #NoHayGolpeEnBolivia (there was no coup in Boliv
 size of the sample are definitely areas of improvement. The data is stored in `./data/data.parquet` or `./data/data.csv`
 
 ### Model selection and metrics 
-The technique used in this project is 
+The stages of the pipline used in this project are Tokenization -> Stop Words removal -> Vectorization -> TF-IDF calculation  -> Feature assembler -> Logistic Regression
+- Train / Test : 80/20
+- f1 score : ~0.87
+- AUC score : ~0.96
 
 ### Kafka / Spark streaming
 
 IN PROGRESS
+
 
 

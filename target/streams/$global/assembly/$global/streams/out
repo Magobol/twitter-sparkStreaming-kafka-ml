@@ -1,4 +1,11 @@
 [0m[[0m[0mdebug[0m] [0m[0mCalculate mappings...[0m
 [0m[[0m[0mdebug[0m] [0m[0mChecking every *.class/*.jar file's SHA-1.[0m
 [0m[[0m[0mdebug[0m] [0m[0mMerging files...[0m
-[0m[[0m[0minfo[0m] [0m[0mAssembly up to date: /home/jorge/Documents/Git/twitter_sentiment_analysis/target/scala-2.11/twitter_sentiment_analysis-assembly-1.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mSHA-1: a4b73d582972d7a63197f128bf5f5bfce7500d00[0m
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/jorge/Documents/Git/twitter_sentiment_analysis/target/scala-2.11/twitter_sentiment_analysis-assembly-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Trainer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jorge/Documents/Git/twitter_sentiment_analysis/target/streams/$global/assemblyOption/$global/streams/assembly/14d054ebc5e0fb75a26c7142bcd254592ad5cfbb_dir/Trainer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Trainer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/jorge/Documents/Git/twitter_sentiment_analysis/target/streams/$global/assemblyOption/$global/streams/assembly/14d054ebc5e0fb75a26c7142bcd254592ad5cfbb_dir/Trainer.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

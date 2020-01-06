@@ -14,6 +14,7 @@ import org.apache.spark.ml.tuning.{ParamGridBuilder, TrainValidationSplit}
 // import org.apache.spark.mllib.evaluation.BinaryClassificationMetrics
 // import org.apache.spark.ml.evaluation
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
+import org.apache.spark.ml.evaluation.BinaryClassificationEvaluator
 
 import org.apache.spark.ml.param.ParamMap
 
@@ -42,6 +43,7 @@ object Trainer {
       .getOrCreate()
 
     import spark.implicits._
+
     println("Hello World")
 
     val df:DataFrame = spark
@@ -51,9 +53,13 @@ object Trainer {
       .option("inferSchema", "true")
       .parquet("data/data.parquet")
 
-
-
-    val cdf = df.drop("__index_level_0__")
+    val cdf:DataFrame = df
+        .withColumn("text",lower($"text"))
+        .withColumn("text",regexp_replace($"text","#nohaygolpeenbolivia.?",""))
+        .withColumn("text",regexp_replace($"text","#golpedeestadobolivia.?",""))
+        .drop("__index_level_0__")
+        .drop("words")
+        .drop("test")
 
     val tokenizer = new RegexTokenizer()
       .setPattern("\\W+")
@@ -62,9 +68,10 @@ object Trainer {
       .setOutputCol("tokens")
     // val dfTokenized = tokenizer.transform(cdf)
 
-    val remover = new StopWordsRemover()
+    val remover = new StopWordsRemover("spanish")
       .setInputCol(tokenizer.getOutputCol)
       .setOutputCol("filtered")
+
 
     // val dfsw = remover.transform(dfTokenized)
 
@@ -104,8 +111,8 @@ object Trainer {
 
     val model = pipeline.fit(cdf)
 
-    val Array(train,test) = df.randomSplit(Array[Double](0.8, 0.2))
-    val size = (train.count,test.count)
+    val Array(train,test) = cdf.randomSplit(Array[Double](0.8, 0.2))
+//    val size = (train.count,test.count)
 
     val predictions = model.transform(test)
 //    predictions.select("label","predictions","probability").show(100)
@@ -116,9 +123,20 @@ object Trainer {
       .setMetricName("f1")
 
     val f1 = evaluator.evaluate(predictions)
+
+
+    val evaluatorAUC = new BinaryClassificationEvaluator()
+      .setLabelCol("label")
+      .setRawPredictionCol("raw_predictions")
+      .setMetricName("areaUnderROC")
+
+    val AUC = evaluatorAUC.evaluate(predictions)
+
+
     println("Test set accuracy = " + f1)
+    println("Test set AUC = " + AUC)
 
-
+//    predictions.select("text","label","predictions").show(10,false)
   }
 
 }
