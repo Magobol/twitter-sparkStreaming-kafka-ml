@@ -1,4 +1,4 @@
-# Twitter Sentiment Analytics on Bolivian November 2019 crisis
+# Twitter Sentiment Analysis of Bolivian November 2019 crisis
 
 ### Context and goals
 Bolivia went through a political crisis in November 2019 after president Evo Morales resigned following violent demonstrations in the country.
