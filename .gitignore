@@ -1,8 +1,8 @@
 secret.json
-./Twitter
+Twitter/
 twitter-app-credentials.txt
 old
 twitterStream.py
 app.py
-.idea
+.idea/
 run.sh
